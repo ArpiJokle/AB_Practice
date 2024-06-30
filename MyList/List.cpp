@@ -14,7 +14,7 @@ void MyList::Print()
 
 int MyList::DeleteElement()
 {
-    if(first == nullptr)
+    if (first == nullptr)
         return -1;
     SElement *Temp = first;
     first = first->next;
@@ -58,4 +58,23 @@ void MyList::ToVector(std::vector<int> &Vec)
     Vec.clear();
     for (SElement *temp = first; temp != nullptr; temp = temp->next)
         Vec.push_back(temp->data);
+}
+
+int MyList::Count(){
+    if(Empty())
+        return 0;
+    SElement *temp = first;
+    int count = 1;
+    while(temp->next != nullptr){
+        count ++;
+        temp = temp->next;
+    }
+    return count;
+}
+
+int MyList::Get(int n){
+    SElement *el = first;
+    for(int i = 1; i<=n; i++)
+        el = el->next;
+    return el->data;
 }

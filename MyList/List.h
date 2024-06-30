@@ -25,5 +25,7 @@ public:
     void AddFirst(int Value);
     int DeleteElement();
     void Print();
+    int Count();
+    int Get(int);
     void ToVector(std::vector<int>&);
 };

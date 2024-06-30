@@ -9,11 +9,9 @@ int main()
     list.AddFirst(4);
     list.AddFirst(2);
     list.AddFirst(3);
-    std::cout << "STAER\n";
     for (ListIterator iterator(&list); iterator.IsDone(); iterator.Next())
     {
         std::cout << iterator.CurrentItem() << '\n';
     }
-    std::cout << "FINISH\n";
     return 0;
 }
